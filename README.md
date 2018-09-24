@@ -6,4 +6,4 @@
 * At Home : 
     1. Install R and R studio
     2. Learn Git and Github
-    3. 
+    3. Hello I'm here
