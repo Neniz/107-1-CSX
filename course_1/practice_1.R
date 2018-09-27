@@ -1,4 +1,4 @@
-### practice_1
+ ### practice_1
 
 # Craete variable called my.height.cm with your actual height in cm 
 my.height.cm <- 158
