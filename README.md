@@ -8,5 +8,5 @@
     2. Learn Git and Github
     3. Finish DataCamp R語言導論
     4. Finish course_1 practice
-    5. 
+    5. Finish hw_1
     
