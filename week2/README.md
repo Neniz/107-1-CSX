@@ -5,7 +5,7 @@
     *    practice_3 (crawler)
 
 * Hw_2
-    *  crawl : unfinished
+    *  crawl 
     *  OOXX : unfinished
     
     
