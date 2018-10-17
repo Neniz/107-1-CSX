@@ -10,7 +10,7 @@
     4. Finish [course_1_practices](https://github.com/Neniz/107-1-CSX/tree/master/course_1)
     5. Finish [hw_1](https://github.com/Neniz/107-1-CSX/tree/master/hw_1)
     
-# Week2
+### Week2
 * Course_2
     *    practice_1
     *    practice_2
@@ -20,7 +20,7 @@
     *  crawl
     *  OOXX : unfinished
     
-    # Week3
+### Week3
 * Hw_3
     * 資料視覺化：Goldman人體骨骼資料
         * hw3.R
