@@ -1,0 +1,48 @@
+---
+title: "VisualizeData_Goldman"
+author: "Neniz"
+date: "2018/10/16"
+output:
+  html_document: default
+
+---
+此次資料採用[Dr. Auerbach網站](http://web.utk.edu/~auerbach/GOLD.htm)中提供的1538份全新世人體骨骼測量資料，透過地區、性別、年齡與人骨測量資料的比對進行分析。
+
+##Call data
+
+```{r}
+goldman.df <- read.csv("Goldman.csv")
+```
+
+###查看資料內容
+-包含了23個地區出土的骨骼資料。
+-編號0是Male, 編號1是Female, 編號後面加上？則是推估為該性別但不確定。
+=可看出Ohio的資料量最多，整體而言男性資料量大於女性。
+```{r message=FALSE}
+#Data Structure
+library(ggplot2)
+library(plotly)
+plot_ly(goldman.df, x = ~Location, color =~Sex, type = "histogram")
+```
+
+###Ohio地區死亡年齡分佈
+以50歲左右為最多
+```{r message=FALSE}
+#Age 
+library(ggplot2)
+library(plotly)
+library(dplyr)
+Ohio.df <- data.frame(filter(goldman.df, Location == "Ohio, United States"))
+plot_ly(Ohio.df, x = ~Age, color =~Sex, type = "histogram")
+```
+
+###Left Humerus Maximum Length分析
+-男性用實心圓表示，女性則是空心圓。
+-可看出些微性別異型的趨勢，男性骨長較女性稍長。
+```{r warning=FALSE}
+#Left Humerus Maximum Length
+library(ggplot2)
+library(plotly)
+plot_ly(goldman.df, x = ~LHML, color = ~Location,   mode = 'markers', symbol = ~Sex, symbols = c('circle','x','o', 'square'),  type = "scatter")
+```
+
